@@ -13,12 +13,57 @@ function submitQuote() {
     }
 }
 
-// Load more reviews (simulated for now)
+// Array holding all reviews (dummy data for illustration)
+const reviews = [
+    { reviewer: "Reviewer 1", rating: "★★★★☆", text: "Really satisfied with the quality. [Dummy Text]" },
+    { reviewer: "Reviewer 2", rating: "★★★☆☆", text: "Decent product but could be better. [Dummy Text]" },
+    { reviewer: "Reviewer 3", rating: "★★★★★", text: "Exceeded my expectations! [Dummy Text]" },
+    { reviewer: "Reviewer 4", rating: "★★☆☆☆", text: "Not quite what I was hoping for. [Dummy Text]" },
+    { reviewer: "Reviewer 5", rating: "★★★★☆", text: "Impressed with the durability. [Dummy Text]" },
+    { reviewer: "Reviewer 6", rating: "★★★☆☆", text: "Good value for the price. [Dummy Text]" },
+    { reviewer: "Reviewer 7", rating: "★★★★★", text: "Highly recommend this product! [Dummy Text]" },
+    { reviewer: "Reviewer 8", rating: "★★★☆☆", text: "Fine, but some parts seem fragile. [Dummy Text]" },
+    { reviewer: "Reviewer 9", rating: "★★★★☆", text: "Loved the color and design. [Dummy Text]" },
+    { reviewer: "Reviewer 10", rating: "★☆☆☆☆", text: "Disappointed with the quality. [Dummy Text]" },
+    { reviewer: "Reviewer 11", rating: "★★★★☆", text: "Worth every penny. [Dummy Text]" },
+    { reviewer: "Reviewer 12", rating: "★★★☆☆", text: "Average experience overall. [Dummy Text]" },
+    { reviewer: "Reviewer 13", rating: "★★★★☆", text: "Good quality and nice packaging. [Dummy Text]" },
+    { reviewer: "Reviewer 14", rating: "★★★★☆", text: "Met my expectations. [Dummy Text]" },
+    { reviewer: "Reviewer 15", rating: "★★★☆☆", text: "Nothing extraordinary, but works. [Dummy Text]" },
+    { reviewer: "Reviewer 16", rating: "★★☆☆☆", text: "Not sure I'd buy this again. [Dummy Text]" },
+    { reviewer: "Reviewer 17", rating: "★★★★★", text: "Absolutely perfect, just what I wanted! [Dummy Text]" },
+    { reviewer: "Reviewer 18", rating: "★★★☆☆", text: "A bit overpriced for the quality. [Dummy Text]" },
+    { reviewer: "Reviewer 19", rating: "★★★★☆", text: "Seems sturdy and well-made. [Dummy Text]" },
+    { reviewer: "Reviewer 20", rating: "★★★★☆", text: "Great look, very sleek. [Dummy Text]" },
+    { reviewer: "Reviewer 21", rating: "★★★☆☆", text: "Functional but lacks polish. [Dummy Text]" },
+    { reviewer: "Reviewer 22", rating: "★★★★★", text: "Can’t imagine going without it now! [Dummy Text]" },
+    { reviewer: "Reviewer 23", rating: "★★☆☆☆", text: "Looked better in the pictures. [Dummy Text]" },
+    { reviewer: "Reviewer 24", rating: "★★★★☆", text: "Fits well and works as described. [Dummy Text]" },
+    { reviewer: "Reviewer 25", rating: "★★★★☆", text: "High quality and very stylish. [Dummy Text]" }
+];
+
+
+let reviewsShown = 0; // Track how many reviews are currently shown
+const reviewsPerPage = 20; // Number of reviews to show per load
+
+// Function to load reviews in batches
 function loadMoreReviews() {
     const reviewList = document.getElementById("reviewList");
-    for (let i = 0; i < 20; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>Reviewer ${i + 21}:</strong> ★★★☆☆ - Great product. Fast shipping. [Dummy Text]`;
-        reviewList.appendChild(li);
+    const nextBatch = reviews.slice(reviewsShown, reviewsShown + reviewsPerPage);
+    
+    nextBatch.forEach(review => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<strong>${review.reviewer}:</strong> ${review.rating} - ${review.text}`;
+        reviewList.appendChild(listItem);
+    });
+    
+    reviewsShown += reviewsPerPage; // Update count of shown reviews
+
+    // Hide "Load More" button if all reviews are shown
+    if (reviewsShown >= reviews.length) {
+        document.querySelector("button").style.display = "none";
     }
 }
+
+// Initial load of 20 reviews
+loadMoreReviews();
