@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-info {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-details {
+    max-width: 500px;
+}
+
+.badges .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.badge.smooth-shipping { background-color: #4CAF50; }
+.badge.rave-reviews { background-color: #FF9800; }
+
+.quote-input {
+    margin-top: 10px;
+}
+
+.reviews {
+    padding: 20px;
+}
+
+#reviewList li {
+    margin-bottom: 10px;
+}
