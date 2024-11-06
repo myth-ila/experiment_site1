@@ -1,0 +1,41 @@
+/<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page 1</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-info">
+            <img src="assets/placeholder-image.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2>Product Title</h2>
+                <p>Seller: Seller2 Name</p>
+                <p>Rating: ⭐⭐⭐⭐⯨</p>
+                <div class="badges">
+                    <span class="badge smooth-shipping">Smooth Shipping</span>
+                </div>
+                <p>Short product details go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button onclick="showQuoteInput()">Make a Quote</button>
+                <div class="quote-input" id="quoteInput" style="display: none;">
+                    <label for="quoteAmount">Enter your quote ($1 to $20):</label>
+                    <input type="number" id="quoteAmount" min="1" max="20">
+                    <button onclick="submitQuote()">Submit Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+            <ul id="reviewList">
+                <!-- Sample of 20 reviews -->
+                <li><strong>Reviewer 1:</strong> ★★★★☆ - Really satisfied with the quality. [Dummy Text]</li>
+            </ul>
+            <button onclick="loadMoreReviews()">Load More Reviews</button>
+        </div>
+    </div>
+</body>
+</html>
