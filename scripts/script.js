@@ -42,7 +42,6 @@ const reviews = [
     { reviewer: "Reviewer 25", rating: "★★★★☆", text: "High quality and very stylish. [Dummy Text]" }
 ];
 
-
 let reviewsShown = 0; // Track how many reviews are currently shown
 const reviewsPerPage = 20; // Number of reviews to show per load
 
