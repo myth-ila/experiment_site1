@@ -15,11 +15,11 @@ function submitQuote() {
 
 // Array holding all reviews (dummy data for illustration)
 const reviews = [
-    { reviewer: "Reviewer 1", rating: "★★★★☆", text: "Really satisfied with the quality. [Dummy Text]" },
-    { reviewer: "Reviewer 2", rating: "★★★☆☆", text: "Decent product but could be better. [Dummy Text]" },
-    { reviewer: "Reviewer 3", rating: "★★★★★", text: "Exceeded my expectations! [Dummy Text]" },
-    { reviewer: "Reviewer 4", rating: "★★☆☆☆", text: "Not quite what I was hoping for. [Dummy Text]" },
-    { reviewer: "Reviewer 5", rating: "★★★★☆", text: "Impressed with the durability. [Dummy Text]" },
+    { reviewer: "Reviewer 1", rating: "★★★★☆", text: "Really satisfied with the quality of these mugs." },
+    { reviewer: "Reviewer 2", rating: "★★★☆☆", text: "Decent product but could be have been packed better for shipping." },
+    { reviewer: "Reviewer 3", rating: "★★★★★", text: "Exceeded my expectations! The designs on the mugs are very pretty" },
+    { reviewer: "Reviewer 4", rating: "★★☆☆☆", text: "Not quite what I was hoping for, arrived damaged" },
+    { reviewer: "Reviewer 5", rating: "★★★★☆", text: "Beautiful mugs, great color and quality." },
     { reviewer: "Reviewer 6", rating: "★★★☆☆", text: "Good value for the price. [Dummy Text]" },
     { reviewer: "Reviewer 7", rating: "★★★★★", text: "Highly recommend this product! [Dummy Text]" },
     { reviewer: "Reviewer 8", rating: "★★★☆☆", text: "Fine, but some parts seem fragile. [Dummy Text]" },
@@ -43,7 +43,7 @@ const reviews = [
 ];
 
 let reviewsShown = 0; // Track how many reviews are currently shown
-const reviewsPerPage = 20; // Number of reviews to show per load
+const reviewsPerPage = 5; // Number of reviews to show per load
 
 // Function to load reviews in batches
 function loadMoreReviews() {
