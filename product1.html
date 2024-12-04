@@ -15,11 +15,13 @@
                 <h2>Product Title</h2>
                 <p>Seller: Seller Name</p>
                 <p>Rating: ⭐⭐⭐⭐⭐</p>
-                <div class="badges">
+                <div class="badges" id="badgeContainer" style="display: none;">
                     <span class="badge smooth-shipping">Smooth Shipping</span>
                     <span class="badge rave-reviews">Rave Reviews</span>
                 </div>
-                <p>Short product details go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button id="viewDetailsBtn" onclick="showBadges()">View Details</button>
+
+                <p>Proudly showcase your school spirit with this premium university-branded mug, the perfect companion for your morning coffee or late-night study sessions. Crafted with care, this 11-ounce ceramic mug features a sleek, ergonomic handle for a comfortable grip and a durable finish that resists chipping and fading. The bold university logo, rendered in vibrant, fade-resistant colors, adds a touch of pride to your beverage experience. Whether you're on campus or off, this mug is a stylish and functional way to stay connected to your alma mater. Ideal for students, alumni, and fans alike!</p>
                 <button onclick="showQuoteInput()">Make a Quote</button>
                 <div class="quote-input" id="quoteInput" style="display: none;">
                     <label for="quoteAmount">Enter your quote ($1 to $20):</label>
