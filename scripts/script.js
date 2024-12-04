@@ -66,3 +66,10 @@ function loadMoreReviews() {
 
 // Initial load of 20 reviews
 loadMoreReviews();
+
+//showBadges function
+function showBadges() {
+    const badgeContainer = document.getElementById("badgeContainer");
+    badgeContainer.style.display = "block";
+}
+
